@@ -31,14 +31,14 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split()
 # Application definition
 
 INSTALLED_APPS = [
-    'lender',
+    'lender_project',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'first'
+    'book_app'
 ]
 
 MIDDLEWARE = [
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'lender.urls'
+ROOT_URLCONF = 'lender_project.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lender.wsgi.application'
+WSGI_APPLICATION = 'lender_project.wsgi.application'
 
 
 # Database
@@ -84,7 +84,7 @@ DATABASES = {
         'HOST': os.environ.get('DB_HOST'),
         'PORT': 5432,
         'TEST': {
-            'NAME': 'lender_test'
+            'NAME': 'lender_project_test'
         }
     }
 }
