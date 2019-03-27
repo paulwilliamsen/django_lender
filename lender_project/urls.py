@@ -15,11 +15,11 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 """
 from django.contrib import admin
 from django.urls import path, include
-from .views import home_view, book_view
+from .views import home_view
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
-    path('/books',include('book_app.urls')),
+    path('/books', include('book_app.urls')),
 ]

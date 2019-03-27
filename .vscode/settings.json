@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "/Users/paul/.local/share/virtualenvs/django_lender_project-D2FJtvCW/bin/python"
+    "python.pythonPath": "/Users/paul/.local/share/virtualenvs/django_lender-D2FJtvCW/bin/python",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
