@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 class Book(models.Model):
@@ -10,8 +11,8 @@ class Book(models.Model):
     last_borrowed = models.DateTimeField(auto_now=True, blank=True)
 
     STATES = [
-        ('available', 'Available'),
-        ('checked_out', 'Checked Out')
+        ('Available', 'Available'),
+        ('Checked Out', 'Checked Out')
     ]
 
     status = models.CharField(choices=STATES, default='available', max_length=48)
