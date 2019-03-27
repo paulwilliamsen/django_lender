@@ -14,12 +14,12 @@ The `urlpatterns` list routes URLs to views. For more information please see:
         2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from .views import home_view, book_view
 
-from .views import home_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home_view, name='home').
-    path('', book_view, name='book')
+    path('', home_view, name='home'),
+    path('/books',include('book_app.urls')),
 ]

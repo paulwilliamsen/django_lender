@@ -6,8 +6,8 @@ class Book(models.Model):
     title = models.CharField(max_length=48)
     author = models.CharField(max_length=4096)
     year = models.CharField(max_length=4096)
-    date_added = models.DateTimeField(max_length=4096, )
-    last_borrowed = models.DateTimeCheckMixin(max_length=4096)
+    date_added = models.DateTimeField(auto_now_add=True, blank=True)
+    last_borrowed = models.DateTimeField(auto_now=True, blank=True)
 
     STATES = [
         ('available', 'Available'),
