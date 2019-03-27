@@ -18,4 +18,3 @@ def book_detail_view(request, pk=None):
     }
 
     return render(request, 'books/book_detail.html', context)
-
